@@ -9,4 +9,6 @@
  * Main module of the application.
  */
 angular
-  .module('lelyvitoApp', []);
+  .module('lelyvitoApp', [
+      'ui.router',
+  	]);

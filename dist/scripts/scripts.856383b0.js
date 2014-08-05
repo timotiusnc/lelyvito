@@ -1,1 +1,0 @@
-"use strict";angular.module("lelyvitoApp",[]),angular.module("lelyvitoApp").controller("MainCtrl",["$scope",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);
