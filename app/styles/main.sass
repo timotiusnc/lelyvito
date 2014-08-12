@@ -5,6 +5,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 //Variables
 $body-font-size: 14px
+$base-color: #333
+$href-color: auto //#FFCC68
+$href-color-hover: auto //#FFB117
 
 html
   height: 100%
@@ -13,19 +16,12 @@ body
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-size: $body-font-size
   height: 100%
-  color: #FFCC68
-  background: #000
-
-body::after
-  content: ""
-  background: url('../images/root/tile-bg.png') repeat 0 0
-  opacity: 0.3
-  top: 0
-  left: 0
-  bottom: 0
-  right: 0
-  position: absolute
-  z-index: -1
+  color: $base-color
+  background: url('../images/savedate.png') no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 //Imports
 @import "calc"
@@ -40,18 +36,21 @@ body::after
   color: #000
   padding: 0.2em 0
 
-#main-ui-view
-  margin-left: 40px
-  padding: 0 10px 10px 10px
-
 .wrapper, .page
   height: 100%
+  background: rgba(255,255,255,0.5)
 
 .page
   background: rgba(232, 244, 255, 0.3)
   overflow: hidden
 
+.page-bg
+  height: 100%
+
+#main-ui-view
+  padding: 0 10px 10px 10px
+
 a
-  color: #FFCC68
+  color: $href-color
   &:hover
-    color: #FFB117
+    color: $href-color-hover
