@@ -12,6 +12,7 @@ angular
   .module('lelyvitoApp', [
       'ui.router',
   	])
+  .constant('$', window.$)
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider
       .otherwise('/');
@@ -19,7 +20,8 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        template: 'Home'
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
       })
       .state('invitation', {
         url: '/invitation',
@@ -43,6 +45,12 @@ angular
       })
       .state('album', {
         url: '/album',
-        template: 'Album'
+        templateUrl: 'views/album.html',
+        controller: 'AlbumCtrl'
       })
+  })
+  .run(function($rootScope, $state) {
+    $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
+      $rootScope.state = toState;
+    });
   });

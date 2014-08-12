@@ -7,7 +7,7 @@
  * # llvMmenu
  */
 angular.module('lelyvitoApp')
-  .directive('llvMmenu', function () {
+  .directive('llvMmenu', function ($) {
     return {
       templateUrl: 'scripts/directives/llv-mmenu.html',
       restrict: 'E',
