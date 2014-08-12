@@ -25,7 +25,7 @@ angular
       })
       .state('invitation', {
         url: '/invitation',
-        template: 'Undangan'
+        templateUrl: 'views/invitation.html'
       })
       .state('location', {
         url: '/location',
