@@ -8,6 +8,6 @@
  * Controller of the lelyvitoApp
  */
 angular.module('lelyvitoApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('HomeCtrl', function ($scope) {
     
   });
