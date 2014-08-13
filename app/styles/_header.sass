@@ -5,6 +5,16 @@
 .mm-opened .header
   //display: none
 
+.mm-menu
+  width: 50%
+  @media (min-width: 550px)
+    width: 275px
+
+html.mm-opening .mm-page, html.mm-opening #mm-blocker, html.mm-opening .mm-fixed-top, html.mm-opening .mm-fixed-bottom
+  left: 50%
+  @media (min-width: 550px)
+    left: 275px
+
 .header a
   display: inline-block
   padding: 5px 8px
