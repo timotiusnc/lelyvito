@@ -29,19 +29,19 @@ angular
       })
       .state('location', {
         url: '/location',
-        template: 'Lokasi'
+        templateUrl: 'views/location.html'
       })
       .state('transport', {
         url: '/transport',
-        template: 'Transportasi'
+        templateUrl: 'views/transport.html'
       })
       .state('guestbook', {
         url: '/guestbook',
-        template: 'Buku Tamu'
+        templateUrl: 'views/guestbook.html'
       })
       .state('about', {
         url: '/about',
-        template: 'Tentang Lely & Vito'
+        templateUrl: 'views/about.html'
       })
       .state('album', {
         url: '/album',
