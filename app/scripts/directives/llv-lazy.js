@@ -14,10 +14,9 @@ angular.module('lelyvitoApp')
         $timeout(function() {
           $(element).lazyload({
             effect: 'fadeIn',
-            effectspeed: 700,
-            'skip_invisible': false
+            effectspeed: 700
           });
-        });
+        }, 0);
       }
     };
   });
