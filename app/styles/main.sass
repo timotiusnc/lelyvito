@@ -58,8 +58,11 @@ body
   .screen-container
     @extend .container-fluid
     background: $overlay-bg
-    .header-title
-      font-family: 'Cinzel'
+    .screen-header
+      @include make-md-column(12)
+      text-align: center
+      .header-title
+        font-family: 'Cinzel'
 
 a
   color: $href-color
