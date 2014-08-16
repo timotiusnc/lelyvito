@@ -8,23 +8,20 @@
  * Controller of the lelyvitoApp
  */
 angular.module('lelyvitoApp')
-  .controller('AlbumCtrl', function ($scope) {
-    var frontSlider = new Dragdealer('demo-simple-slider', {
-      steps: 4,
-      speed: 0.3,
-      loose: true,
-      requestAnimationFrame: true
+  .controller('AlbumCtrl', function ($scope, $timeout) {
+    $scope.thumbs = [];
+    for(var i=1; i<=14; ++i) {
+      $scope.thumbs.push(i);
+    }
+
+    $timeout(function() {
+      $('a.gallery').colorbox({
+        height: '75%',
+        rel: 'gallery',
+        transition: 'elastic',
+        slideshow: true
+      });
+
+      $.colorbox.resize();
     });
-
-    //frontSlider.setStep(3,0, true);
-
-    $scope.frontImages = [
-      'images/root/front_1.jpg',
-      'images/root/front_2.jpg',
-      'images/root/front_3.jpg',
-      'images/root/front_4.jpg',
-      'images/root/front_5.jpg',
-      'images/root/front_6.jpg',
-      'images/root/front_7.jpg',
-    ];
   });

@@ -2,7 +2,14 @@
   <div class="row">
     <div class="screen-header">
       <h2 class="header-title">Album</h2>
-      <em>Coming soon...</em>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="album-gallery col-md-10 col-md-offset-1">
+      <a class="gallery" href="images/album/original_{{n}}.jpg" ng-repeat="n in thumbs">
+        <img src='images/album/resize_{{n}}.jpg'>
+      </a>
     </div>
   </div>
 </div>
