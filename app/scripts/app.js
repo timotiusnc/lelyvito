@@ -41,7 +41,7 @@ angular
       })
       .state('about', {
         url: '/about',
-        templateUrl: 'views/about.html'
+        templateUrl: 'views/about.html',
       })
       .state('album', {
         url: '/album',
