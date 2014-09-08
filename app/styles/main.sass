@@ -46,9 +46,12 @@ body
     .screen-header
       text-align: center
       h1
+        font-size: emCalc(20px)
         letter-spacing: 13px
         font-weight: bold
         text-transform: uppercase
+        @media (min-width: $screen-md-min)
+          font-size: emCalc(36px)
 
 a
   color: $href-color
