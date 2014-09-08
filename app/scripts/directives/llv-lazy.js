@@ -12,9 +12,7 @@ angular.module('lelyvitoApp')
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
         $timeout(function() {
-          $(element).lazyload({
-            effect: 'fadeIn'
-          });
+          $(element).lazyload();
         });
       }
     };

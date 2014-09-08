@@ -5,35 +5,22 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 //Variables
 $body-font-size: 14px
-$base-color: #333
+$base-color: #fff
 $href-color: auto //#FFCC68
 $href-color-hover: auto //#FFB117
 $overlay-bg: rgba(255,255,255,0.8)
 
-html
-  height: 100%
-
 body
-  //font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-size: $body-font-size
-  height: 100%
   color: $base-color
-  background: url('../images/save-sm.png') no-repeat center center fixed
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
-  @media (min-width: $screen-md-min)
-    background: url('../images/save-lg.png') no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+  background: #DB84AD
 
 //Imports
 @import "calc"
 @import "elmt/llv-btn"
 @import "elmt/llv-fbcomment"
+@import "elmt/llv-timeline"
 @import "nav"
 @import "header"
 @import "slide"
@@ -53,18 +40,15 @@ body
   padding: 0.2em 0
 
 #main-ui-view
-  position: absolute
-  width: 100%
-  top: 0
-  bottom: 0
   .screen-container
     @extend .container-fluid
-    background: $overlay-bg
+    padding: 60px 15px 15px 30px
     .screen-header
-      @include make-md-column(12)
       text-align: center
-      .header-title
-        font-family: 'Average'
+      h1
+        letter-spacing: 13px
+        font-weight: bold
+        text-transform: uppercase
 
 a
   color: $href-color

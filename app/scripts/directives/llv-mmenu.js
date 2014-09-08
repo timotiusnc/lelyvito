@@ -13,11 +13,7 @@ angular.module('lelyvitoApp')
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
         $(document).ready(function() {
-        	$('#menu').mmenu({
-            dragOpen: {
-              open: true
-            }
-          });
+        	$('#menu').mmenu();
         });
       }
     };
