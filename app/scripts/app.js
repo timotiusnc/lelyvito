@@ -13,6 +13,7 @@ angular
       'ui.router',
   	])
   .constant('$', window.$)
+  .constant('MAX_IMG', 13)
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider
       .otherwise('/');
@@ -47,6 +48,11 @@ angular
         url: '/album',
         templateUrl: 'views/album.html',
         controller: 'AlbumCtrl'
+      })
+      .state('albumDetail', {
+        url: '/album/{imgId}',
+        templateUrl: 'views/album-detail.html',
+        controller: 'AlbumDetailCtrl'
       })
   })
   .run(function($rootScope, $state) {

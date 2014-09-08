@@ -46,6 +46,7 @@
       <div class="page" ng-class="state.name">
         <div class="header">
           <a href="#menu"><i class="fa fa-bars fa-2x"></i></a>
+          <!--<llv-staticmenu></llv-staticmenu>-->
         </div>
         
         <div id="main-ui-view" ui-view>
@@ -95,7 +96,6 @@
     <script src="bower_components/skidding--dragdealer/src/dragdealer.js"></script>
     <script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
     <script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
-    <script src="bower_components/colorbox/jquery.colorbox.js"></script>
     <!-- endbower -->
     <script src="bower_components/jQuery.mmenu/src/js/addons/jquery.mmenu.dragopen.min.js"></script>
     <!-- endbuild -->
@@ -103,10 +103,13 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/directives/llv-album-dir.js"></script>
         <script src="scripts/directives/llv-mmenu.js"></script>
+        <script src="scripts/directives/llv-staticmenu.js"></script>
         <script src="scripts/directives/llv-lazy.js"></script>
         <script src="scripts/directives/llv-fbcomment.js"></script>
         <script src="scripts/controllers/album.js"></script>
+        <script src="scripts/controllers/album-detail.js"></script>
         <!-- endbuild -->
 </body>
 </html>

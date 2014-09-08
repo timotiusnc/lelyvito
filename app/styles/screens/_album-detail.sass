@@ -1,0 +1,26 @@
+#album-detail-container
+  height: 100%
+  .album-detail-actions
+    display: none
+    @media (min-width: $screen-md-min)
+      display: block
+      font-weight: bold
+      margin-bottom: 3px
+      font-size: emCalc(13px)
+      a
+        text-decoration: none
+  .album-detail-content
+    .album-detail-prev, .album-detail-next
+      top: 35%
+      @include make-xs-column(2)
+      @media (min-width: $screen-md-min)
+        display: none
+  .album-detail-content, .album-detail-img
+    text-align: center
+  .album-detail-img
+    @include make-xs-column(8)
+    @media (min-width: $screen-md-min)
+      @include make-xs-column(12)
+    img
+      @extend .img-thumbnail
+      max-height: 550px

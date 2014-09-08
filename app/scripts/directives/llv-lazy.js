@@ -9,12 +9,11 @@
 angular.module('lelyvitoApp')
   .directive('llvLazy', function ($, $timeout) {
     return {
-      restrict: 'C',
+      restrict: 'EA',
       link: function postLink(scope, element, attrs) {
         $timeout(function() {
           $(element).lazyload({
-            effect: 'fadeIn',
-            effectspeed: 500
+            effect: 'fadeIn'
           });
         });
       }
