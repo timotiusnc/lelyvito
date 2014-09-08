@@ -13,7 +13,7 @@
   .album-detail-content
     .album-detail-prev, .album-detail-next
       font-size: emCalc(20px)
-      @include make-xs-column(1)
+      @include make-xs-column(2)
       @media (min-width: $screen-md-min)
         display: none
       a
@@ -21,7 +21,7 @@
   .album-detail-content, .album-detail-img
     text-align: center
   .album-detail-img
-    @include make-xs-column(10)
+    @include make-xs-column(8)
     @media (min-width: $screen-md-min)
       @include make-xs-column(12)
     img
