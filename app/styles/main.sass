@@ -5,7 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 //Variables
 $body-font-size: 14px
-$base-color: #fff
+$base-color: #ddd
 $href-color: auto //#FFCC68
 $href-color-hover: auto //#FFB117
 $overlay-bg: rgba(255,255,255,0.8)
@@ -13,14 +13,21 @@ $overlay-bg: rgba(255,255,255,0.8)
 body
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-size: $body-font-size
-  color: $base-color
   background: #DB84AD
+  &.pink
+    background: #DB84AD
+  &.dark-blue
+    background: blue
+  &.tosca
+    background: turquoise
 
 //Imports
 @import "calc"
+@import "elmt/wedinvite"
 @import "elmt/llv-btn"
 @import "elmt/llv-fbcomment"
 @import "elmt/llv-timeline"
+@import "elmt/llv-theme-changer"
 @import "nav"
 @import "header"
 @import "slide"
@@ -44,6 +51,7 @@ body
     @extend .container-fluid
     padding: 60px 15px 15px 30px
     .screen-header
+      color: #fff
       text-align: center
       h1
         font-size: emCalc(20px)

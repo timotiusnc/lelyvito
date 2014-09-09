@@ -11,6 +11,7 @@
 angular
   .module('lelyvitoApp', [
       'ui.router',
+      'firebase'
   	])
   .constant('$', window.$)
   .constant('MAX_IMG', 13)
@@ -38,7 +39,8 @@ angular
       })
       .state('guestbook', {
         url: '/guestbook',
-        templateUrl: 'views/guestbook.html'
+        templateUrl: 'views/guestbook.html',
+        controller: 'GuestbookCtrl'
       })
       .state('about', {
         url: '/about',

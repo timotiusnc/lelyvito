@@ -24,7 +24,7 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Average|Great+Vibes|Cinzel' rel='stylesheet' type='text/css'>-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   </head>
-  <body ng-app="lelyvitoApp">
+  <body ng-class="bgColor" ng-app="lelyvitoApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -43,6 +43,8 @@
 
     <div id="main-ui-view" ui-view>
     </div>
+
+    <llv-theme-changer></llv-theme-changer>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -90,13 +92,18 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/guestbook.js"></script>
         <script src="scripts/directives/llv-album-dir.js"></script>
         <script src="scripts/directives/llv-bootstrap-menu.js"></script>
         <script src="scripts/directives/llv-staticmenu.js"></script>
         <script src="scripts/directives/llv-lazy.js"></script>
         <script src="scripts/directives/llv-fbcomment.js"></script>
+        <script src="scripts/directives/llv-theme-changer.js"></script>
         <script src="scripts/controllers/album.js"></script>
         <script src="scripts/controllers/album-detail.js"></script>
         <!-- endbuild -->
+
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
 </body>
 </html>
