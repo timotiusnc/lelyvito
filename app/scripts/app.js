@@ -10,8 +10,10 @@
  */
 angular
   .module('lelyvitoApp', [
+      'ngAnimate',
       'ui.router',
-      'firebase'
+      'firebase',
+      'angularMoment'
   	])
   .constant('$', window.$)
   .constant('MAX_IMG', 13)
@@ -55,7 +57,7 @@ angular
         url: '/album/{imgId}',
         templateUrl: 'views/album-detail.html',
         controller: 'AlbumDetailCtrl'
-      })
+      });
   })
   .run(function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {

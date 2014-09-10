@@ -1,15 +1,1 @@
-<div id="guestbook-container" class="screen-container"> <div class="screen-header"> <h1>Buku Tamu </h1></div> <!--<div class='example-chat-toolbar'>
-    <label for='nameInput'>Username:</label>
-    <input ng-model='name' type='text' id='nameInput' placeholder='enter a username...'>
-  </div>
-
-  <ul id='example-messages' class='example-chat-messages'>
-    <li ng-repeat='msg in messages'>
-      <strong class='example-chat-username'>{{msg.from}}</strong>
-      {{msg.body}}
-    </li>
-  </ul>
-
-  <footer>
-    <input ng-model='msg' ng-keydown="addMessage($event)" type='text' id='messageInput'  placeholder='Type a message...'>
-  </footer>--> <div class="row"> <div class="col-md-4 col-md-offset-4"> <form id="guestbook-form" role="form"> <div class="form-group"> <label for="inputfullname">Full Name</label> <input type="text" class="form-control" id="inputfullname" placeholder="Enter full name" ng-model="name"> </div> <div class="form-group"> <label for="inputgreetings">Greetings</label> <input type="text" class="form-control" id="inputgreetings" placeholder="Your greetings..." ng-model="msg"> </div> <button type="submit" class="btn btn-default" ng-click="addMessage()">Submit</button> </form> </div> </div> <div class="row guestbook-instances"> <div class="guestbook-instance col-md-3" ng-repeat="msg in messages"> <span class="quote-icon"></span> <div class="guestbook-message">{{msg.body}}</div> <div class="guestbook-author">{{msg.from}}</div> </div> </div> </div>
+<div id="guestbook-container" class="screen-container"> <div class="screen-header"> <h1>Buku Tamu </h1></div> <div class="row guestbook-loading" ng-show="isLoading"> <div class="col-md-4 col-md-offset-4"> <i class="fa fa-spin fa-spinner fa-4x"></i><br><br> </div> </div> <div class="row guestbook-count-container" ng-show="!isLoading"> <div class="col-md-12"> <div class="guestbook-count">{{messages.length}} greetings so far !!</div> <button class="btn btn-danger" ng-click="formToggle()"> <span ng-show="showForm">Collapse Form</span> <span ng-show="!showForm">Say your greetings !!</span> </button> </div> </div> <div id="guestbook-form" class="row" ng-show="showForm"> <div class="col-md-4 col-md-offset-4"> <form role="form"> <div class="form-group"> <input type="text" class="form-control" id="inputfullname" placeholder="Your full name..." ng-model="name"> </div> <div class="form-group"> <input type="text" class="form-control" id="inputgreetings" placeholder="Your greetings..." ng-model="msg"> </div> <button type="submit" class="btn btn-danger" ng-click="addMessage()">Submit</button> </form> </div> </div> <div class="row guestbook-instances"> <div class="guestbook-instance col-md-3" ng-repeat="msg in messages | orderBy:'timestamp':true"> <span class="quote-icon"></span> <div class="guestbook-message">{{msg.body}}</div> <div class="guestbook-author">{{msg.from}}</div> <div class="guestbook-timestamp" am-time-ago="msg.timestamp" title="{{msg.timestamp | amDateFormat: 'dddd, MMMM Do YYYY, HH:mm:ss'}}"></div> </div> </div> </div>

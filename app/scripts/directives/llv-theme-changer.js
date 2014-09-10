@@ -18,8 +18,8 @@ angular.module('lelyvitoApp')
   })
   .controller('llvThemeChangerCtrl', function($scope) {
     $scope.isActive = false;
-    $scope.bgColor = 'tosca'; //default
+    $scope.bgColor = 'photo'; //default
     $scope.toggleThemeChanger = function() {
       $scope.isActive = !$scope.isActive;
-    }
+    };
   });

@@ -1,11 +1,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/"
 // bower:scss
-@import bootstrap-sass-official/assets/stylesheets/bootstrap.scss
+@import bootstrap-sass-official/assets/stylesheets/_bootstrap.scss
 // endbower
 
 //Variables
 $body-font-size: 14px
-$base-color: #ddd
+$base-color: #333
 $href-color: auto //#FFCC68
 $href-color-hover: auto //#FFB117
 $overlay-bg: rgba(255,255,255,0.8)
@@ -20,6 +20,18 @@ body
     background: blue
   &.tosca
     background: turquoise
+  &.photo
+    background: url('../images/bg2-white-small.jpg') no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    @media (min-width: $screen-md-min)
+      background: url('../images/bg-white-small.jpg') no-repeat center center fixed
+      -webkit-background-size: cover
+      -moz-background-size: cover
+      -o-background-size: cover
+      background-size: cover
 
 //Imports
 @import "calc"
@@ -51,7 +63,7 @@ body
     @extend .container-fluid
     padding: 60px 15px 15px 30px
     .screen-header
-      color: #fff
+      color: $base-color
       text-align: center
       h1
         font-size: emCalc(20px)
@@ -65,3 +77,5 @@ a
   color: $href-color
   &:hover
     color: $href-color-hover
+
+@import "elmt/guestbook-animation"
