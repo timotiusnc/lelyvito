@@ -13,7 +13,8 @@ angular
       'ngAnimate',
       'ui.router',
       'firebase',
-      'angularMoment'
+      'angularMoment',
+      'angular-loading-bar'
   	])
   .constant('$', window.$)
   .constant('MAX_IMG', 13)
@@ -47,6 +48,7 @@ angular
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .state('album', {
         url: '/album',
