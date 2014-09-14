@@ -4,6 +4,12 @@
       width: 25px
     .user-display-name
       font-weight: bold
+    > div
+      -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175)
+      box-shadow: 0 1px 6px rgba(0,0,0,0.175)
+      padding: 13px
+      border: 1px solid #d4d4d4
+      border-radius: 2px
   .guestbook-loading, .guestbook-count-container
     color: $base-color
     text-align: center
@@ -22,15 +28,19 @@
       font-weight: bold
   .guestbook-instances
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    margin-bottom: 30px
+    margin-bottom: 20px
     .guestbook-instance
+      padding-top: 13px
+      border: 1px solid #d4d4d4
+      border-radius: 2px
+      -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175)
+      box-shadow: 0 1px 6px rgba(0,0,0,0.175)
       span.quote-icon
         color: $base-color
         font-size: emCalc(16px)
+      .guestbook-avatar
+        margin-bottom: 5px
       .guestbook-message-container
-        padding-left: 0
-        .guestbook-avatar
-          margin-bottom: 5px
         .guestbook-author
           font-size: emCalc(14px)
           font-weight: bold
