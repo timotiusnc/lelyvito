@@ -7,7 +7,7 @@
   .guestbook-loading, .guestbook-count-container
     color: $base-color
     text-align: center
-    margin-bottom: 8px
+    margin-bottom: 30px
   .guestbook-loading
     color: lighten($base-color, 30%)
   .guestbook-please
@@ -21,25 +21,25 @@
     button
       font-weight: bold
   .guestbook-instances
-    margin: 10px 0
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    margin-bottom: 30px
     .guestbook-instance
-      margin: 0 0 10px 0
-      padding: 5px 8px
-      text-align: center
       span.quote-icon
         color: $base-color
-        font-size: emCalc(25px)
-        font-family: 'wedinvite-dash'
-        &:before
-          content: "\e615"
-      .guestbook-author
-        font-size: emCalc(14px)
-        color: lighten($base-color, 10%)
-      .guestbook-timestamp
-        font-size: emCalc(11px)
-        color: lighten($base-color, 30%)
-      .guestbook-message
-        font-size: emCalc(20px)
+        font-size: emCalc(16px)
+      .guestbook-message-container
+        padding-left: 0
+        .guestbook-avatar
+          margin-bottom: 5px
+        .guestbook-author
+          font-size: emCalc(14px)
+          font-weight: bold
+          color: lighten($base-color, 10%)
+        .guestbook-timestamp
+          font-size: emCalc(11px)
+          color: lighten($base-color, 30%)
+        .guestbook-message
+          font-size: emCalc(13px)
   .guestbook-instance.ng-enter, .guestbook-instance.ng-move
     -webkit-transition: 0.5s linear all
     -moz-transition: 0.5s linear all

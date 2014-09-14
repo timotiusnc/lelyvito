@@ -1,15 +1,19 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="lelyvitoApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title ng-bind="state.data.pageTitle"></title>
+    <meta name="description" content="Lely & Vito Wedding | October 11st 2014">
     <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="lely,vito,lelyvitowedding">
     <meta property="fb:app_id" content="1464778593784872"/>
+    <meta property="og:site_name" content="Lely & Vito Wedding">
+    <meta property="og:title"  content="{{state.data.pageTitle}}" /> 
     <meta property="og:type"   content="website" /> 
-    <meta property="og:url"    content="http://timotiusnc.github.io/lelyvito/" /> 
-    <meta property="og:title"  content="Lely & Vito" /> 
-    <meta property="og:image"  content="https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png" /> 
+    <meta property="og:url"    content="http://lelyvitowedding.com/" /> 
+    <meta property="og:description" content="Lely & Vito Wedding | October 11st 2014">
+    
+    <meta property="og:image"  content="http://lelyvitowedding.com/images/save-lg.png" /> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -25,7 +29,7 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans|Average|Great+Vibes|Cinzel' rel='stylesheet' type='text/css'>-->
     <link href="https://fonts.googleapis.com/css?family=Lato|Great+Vibes" rel="stylesheet" type="text/css">
   </head>
-  <body ng-class="bgColor" ng-app="lelyvitoApp">
+  <body ng-class="bgColor">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -45,7 +49,22 @@
     <div id="main-ui-view" ui-view>
     </div>
 
-    <llv-theme-changer></llv-theme-changer>
+    <footer>
+        <div class="container">
+          <div
+            class="fb-like"
+            data-href="http://lelyvitowedding.com/"
+            data-layout="button_count"
+            data-action="like"
+            data-show-faces="true"
+            data-share="true">
+          </div>
+          <p>
+            Lely & Vito<br>
+            Crafted with <i class="fa fa-heart"></i> by TNC
+          </p>
+        </div>
+    </footer>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

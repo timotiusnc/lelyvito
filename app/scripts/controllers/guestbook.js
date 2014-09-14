@@ -32,6 +32,7 @@ angular.module('lelyvitoApp')
         $scope.messages.$add({
           from: $scope.user.displayName,
           body: $scope.msg,
+          user: $scope.user,
           timestamp: Firebase.ServerValue.TIMESTAMP
         });
 
@@ -46,7 +47,6 @@ angular.module('lelyvitoApp')
         console.log('errorr',error);
         $scope.isLoggedIn = false;
       } else if (user) { // user authenticated with Firebase
-        console.log("User ", user);
         $scope.$apply(function() {
           $scope.isLoggedIn = true;
           $scope.user = user;
@@ -59,5 +59,9 @@ angular.module('lelyvitoApp')
 
     $scope.loginFB = function() {
       authClient.login('facebook');
+    };
+
+    $scope.loginTW = function() {
+      authClient.login('twitter');
     };
   });
