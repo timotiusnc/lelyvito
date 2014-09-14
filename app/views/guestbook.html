@@ -1,35 +1,19 @@
 <div id="guestbook-container" class="screen-container">
   <div class="screen-header">
-    <h1>Buku Tamu</h2>    
+    <h1>Guestbook</h2>    
+  </div>
+
+  <div class="row guestbook-count-container">
+    <div class="col-md-12">
+      <div class="guestbook-please">
+        Drop your wishes & blessings here, please. We will be so happy to hear from you :)
+      </div>
+    </div>
   </div>
 
   <div class="row guestbook-loading" ng-show="isLoading">
     <div class="col-md-4 col-md-offset-4">
       <i class="fa fa-spin fa-spinner fa-4x"></i><br><br>
-    </div>
-  </div>
-
-  <div class="row guestbook-count-container" ng-show="!isLoading">
-    <div class="col-md-12">
-      <div class="guestbook-count">{{messages.length}} greetings so far !!</div>
-      <button class="btn btn-danger" ng-click="formToggle()">
-        <span ng-show="showForm">Collapse Form</span>
-        <span ng-show="!showForm">Say your greetings !!</span>
-      </button>
-    </div>
-  </div>
-
-  <div id="guestbook-form" class="row" ng-show="showForm">
-    <div class="col-md-4 col-md-offset-4">
-      <form role="form">
-        <div class="form-group">
-          <input type="text" class="form-control" id="inputfullname" placeholder="Your full name..." ng-model="name">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="inputgreetings" placeholder="Your greetings..." ng-model="msg">
-        </div>    
-        <button type="submit" class="btn btn-danger" ng-click="addMessage()">Submit</button>
-      </form>
     </div>
   </div>
 
@@ -39,6 +23,30 @@
       <div class="guestbook-message">{{msg.body}}</div>
       <div class="guestbook-author">{{msg.from}}</div>
       <div class="guestbook-timestamp" am-time-ago="msg.timestamp" title="{{msg.timestamp | amDateFormat: 'dddd, MMMM Do YYYY, HH:mm:ss'}}"></div>
+    </div>
+  </div>
+
+  <div class="row guestbook-login" ng-show="!isLoading">
+    <div class="col-md-6 col-md-offset-3">
+      <h4>Say your greetings with</h4>
+      <button class="btn btn-primary" ng-click="loginFB()"><i class="fa fa-facebook"></i> | Facebook</button>
+      <button class="btn btn-info"><i class="fa fa-facebook"></i> | Twitter</button>
+    </div>
+  </div>
+
+  <div id="guestbook-form" class="row" ng-show="isLoggedIn">
+    <div class="col-md-6 col-md-offset-3">
+      <form role="form">
+        <div class="form-group">
+          <img ng-src="http://graph.facebook.com/{{user.id}}/picture?type=square"/>
+          <span class="user-display-name">{{user.displayName}}</span>
+          <!--<input type="text" class="form-control" id="inputfullname" placeholder="Your full name..." ng-model="name">-->
+        </div>
+        <div class="form-group">
+          <textarea rows="3" class="form-control" id="inputgreetings" placeholder="Your wishes & blessings..." ng-model="msg"></textarea>
+        </div>    
+        <button type="submit" class="btn btn-danger" ng-click="addMessage()">Submit</button>
+      </form>
     </div>
   </div>
 </div>
