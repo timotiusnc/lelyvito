@@ -14,7 +14,8 @@ angular
       'ui.router',
       'firebase',
       'angularMoment',
-      'angular-loading-bar'
+      'angular-loading-bar',
+      'ui.bootstrap',
   	])
   .constant('$', window.$)
   .constant('MAX_IMG', 13)
@@ -43,6 +44,7 @@ angular
       .state('transport', {
         url: '/transport',
         templateUrl: 'views/transport.html',
+        controller: 'TransportCtrl',
         data : { pageTitle: 'Transportation' + LLV_TITLE }
       })
       .state('guestbook', {
