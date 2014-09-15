@@ -30,10 +30,20 @@ angular.module('lelyvitoApp')
 
     var train = [
       {
-        name: 'Jakarta - Kediri'
+        name: 'Jakarta (Gambir) - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=GMR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&do=Cari'
       },
       {
-        name: 'Surabaya - Kediri'
+        name: 'Bandung - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=BD&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Surabaya (Gubeng) - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=SGU&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Malang (Kota) - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=ML&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
       }
     ];
 
@@ -61,13 +71,37 @@ angular.module('lelyvitoApp')
       {
         name: 'Hotel Bismo Kediri',
         link: 'http://www.hotelbismo.com/'
+      },
+      {
+        name: 'Bukit Daun Hotel & Resort Kediri',
+        link: 'http://www.bukit-daun.com/'
+      },
+      {
+        name: 'Hotel Penataran Kediri',
+        link: 'http://www.phrikediriraya.com/page/show/146/hotel-penataran'
       }
     ];
 
-    $scope.model = {
-      plane: plane,
-      train: train,
-      bus: bus,
-      hotel: hotel
-    };
+    $scope.model = [
+      {
+        title: 'Plane',
+        content: plane,
+        active: true
+      },
+      {
+        title: 'Train',
+        content: train,
+      },
+      {
+        title: 'Bus',
+        content: []
+      },
+      {
+        title: 'Hotel',
+        content: hotel
+      },
+      {
+        title: 'Google Maps'
+      }
+    ];
   });
