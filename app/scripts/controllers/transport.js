@@ -19,6 +19,30 @@ angular.module('lelyvitoApp')
         link: 'http://www.traveloka.com/fullsearch?ap=JKTA.MLG&dt=10-10-2014.NA&ps=1.0.0'
       },
       {
+        name: 'Bandung - Surabaya',
+        link: 'http://www.traveloka.com/fullsearch?ap=BDO.SUB&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
+        name: 'Bandung - Malang',
+        link: 'http://www.traveloka.com/fullsearch?ap=BDO.MLG&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
+        name: 'Jogja - Surabaya',
+        link: 'http://www.traveloka.com/fullsearch?ap=JOG.SUB&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
+        name: 'Jojga - Malang',
+        link: 'http://www.traveloka.com/fullsearch?ap=JOG.MLG&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
+        name: 'Semarang - Surabaya',
+        link: 'http://www.traveloka.com/fullsearch?ap=SRG.SUB&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
+        name: 'Semarang - Malang',
+        link: 'http://www.traveloka.com/fullsearch?ap=SRG.MLG&dt=10-10-2014.NA&ps=1.0.0'
+      },
+      {
         name: 'Makassar - Surabaya',
         link: 'http://www.traveloka.com/fullsearch?ap=UPG.SUB&dt=10-10-2014.NA&ps=1.0.0'
       },
@@ -44,12 +68,23 @@ angular.module('lelyvitoApp')
       {
         name: 'Malang (Kota) - Kediri',
         link: 'http://www.tiket.com/kereta-api/cari?d=ML&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Tegal - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=TG&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Jember - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=JR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
       }
     ];
 
-    var bus = {
-
-    };
+    var bus = [
+      {
+        name: 'P.O. Harapan Jaya',
+        link: 'http://www.poharapanjaya.com/bus-malam/'
+      }
+    ];
 
     var hotel = [
       {
@@ -94,7 +129,7 @@ angular.module('lelyvitoApp')
       },
       {
         title: 'Bus',
-        content: []
+        content: bus
       },
       {
         title: 'Hotel',
