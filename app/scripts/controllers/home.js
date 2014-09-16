@@ -8,6 +8,8 @@
  * Controller of the lelyvitoApp
  */
 angular.module('lelyvitoApp')
-  .controller('HomeCtrl', function ($scope) {
-    
+  .controller('HomeCtrl', function ($scope, $state) {
+    $scope.goToInvitation = function() {
+      $state.go('invitation');
+    };
   });
