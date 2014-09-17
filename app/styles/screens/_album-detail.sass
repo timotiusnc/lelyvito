@@ -24,6 +24,10 @@
     @include make-xs-column(8)
     @media (min-width: $screen-md-min)
       @include make-xs-column(12)
+    i
+      position: absolute
+      left: 50%
+      z-index: -1
     img
       @extend .img-thumbnail
       max-height: 550px
