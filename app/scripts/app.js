@@ -16,6 +16,8 @@ angular
       'angularMoment',
       'angular-loading-bar',
       'ui.bootstrap',
+      'angulartics',
+      'angulartics.google.analytics'
   	])
   .constant('$', window.$)
   .constant('MAX_IMG', 13)
