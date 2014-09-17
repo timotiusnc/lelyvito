@@ -1,19 +1,24 @@
 #guestbook-container
-  #guestbook-form
+  .btn-toggle
+    text-align: center
+    margin-bottom: 8px
+  #guestbook-form, #rsvp-form
     img
       width: 25px
     .user-display-name
       font-weight: bold
-    > div
-      -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175)
-      box-shadow: 0 1px 6px rgba(0,0,0,0.175)
-      padding: 13px
-      border: 1px solid #d4d4d4
-      border-radius: 2px
+  #guestbook-form > div
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175)
+    box-shadow: 0 1px 6px rgba(0,0,0,0.175)
+    padding: 13px
+    border: 1px solid #d4d4d4
+    border-radius: 2px
   .guestbook-loading, .guestbook-count-container
     color: $base-color
     text-align: center
     margin-bottom: 30px
+  .rsvp-count-container
+    text-align: center
   .guestbook-loading
     color: lighten($base-color, 30%)
   .guestbook-please
@@ -22,13 +27,14 @@
     font-size: emCalc(16px)
     margin-bottom: 8px
     color: lighten($base-color, 10%)
-  .guestbook-login
+  .guestbook-login, .rsvp-login
     margin-bottom: 20px
     button
       font-weight: bold
-  .guestbook-instances
+  .guestbook-instances, .rsvp-instances
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     margin-bottom: 20px
+  .guestbook-instances
     .guestbook-instance
       padding-top: 13px
       border: 1px solid #d4d4d4
@@ -60,5 +66,12 @@
   .guestbook-instance.ng-enter-active, .guestbook-instance.ng-move-active
     opacity: 1
     transform: translate(0, 0)
+  .rsvp-container
+    margin-bottom: 8px
+  .rsvp-title
+    font-weight: bold
+  .rsvp-avatar
+    float: left
+    margin: 0 5px 5px 0
   #check-story-btn
     margin-top: 20px
