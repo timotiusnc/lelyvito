@@ -61,6 +61,16 @@ angular
         controller: 'AboutCtrl',
         data : { pageTitle: 'About' + LLV_TITLE }
       })
+      .state('aboutVito', {
+        url: '/about/vito',
+        templateUrl: 'views/about-vito.html',
+        data : { pageTitle: 'About Vito' + LLV_TITLE }
+      })
+      .state('aboutLely', {
+        url: '/about/lely',
+        templateUrl: 'views/about-lely.html',
+        data : { pageTitle: 'About Lely' + LLV_TITLE }
+      })
       .state('album', {
         url: '/album',
         templateUrl: 'views/album.html',
