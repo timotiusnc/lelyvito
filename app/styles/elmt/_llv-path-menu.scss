@@ -4,8 +4,8 @@ $menu-count: 7;
 $diff-deg: $ninety/$menu-count;
 
 @mixin top-left($idx) {
-  top: sin($ninety - ($diff-deg * $idx)) * $radius * -1em + (0.6em * $idx);
-  left: cos($ninety - ($diff-deg * $idx)) * $radius * 1em + (0.5em * $idx);
+  top: sin($ninety - ($diff-deg * $idx)) * $radius * -1em + (0.5em * $idx);
+  left: cos($ninety - ($diff-deg * $idx)) * $radius * 1em + (0.7em * $idx);
 }
 
 nav.path-nav {
@@ -67,7 +67,7 @@ label[for="shownav"] {
     height: 1em;
     width: 1em;
     line-height: 1;
-    font-size: 2.4em;
+    font-size: 3.4em;
     cursor: pointer; 
     pointer-events: none;     
                 
@@ -114,8 +114,8 @@ input:checked + label[for="shownav"]:before {
 /* Navigation elements  */
 .menu {
     z-index: 1; /* should be lower than z-index of the label */
-    height: 2.4em;
-    width: 2.4em;
+    height: 3em;
+    width: 3em;
 }
 .menu li {
     list-style: none;
@@ -125,11 +125,11 @@ input:checked + label[for="shownav"]:before {
    position: absolute;
    left: 0;
    top: 0;
-   width: 2em;
-   height: 2em;
-   padding: .5em;           
-   margin-top: .3em; /* (2.4em - 1em)/2 - 0.25 */
-   margin-left: .3em;
+   width: 3em;
+   height: 3em;
+   padding: 1em;           
+   margin-top: 0; /* (2.4em - 1em)/2 - 0.25 */
+   margin-left: 0;
    
    text-decoration: none;
    text-align: center;
