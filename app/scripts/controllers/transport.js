@@ -52,40 +52,6 @@ angular.module('lelyvitoApp')
       }
     ];
 
-    var train = [
-      {
-        name: 'Jakarta (Gambir) - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=GMR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&do=Cari'
-      },
-      {
-        name: 'Bandung - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=BD&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
-      },
-      {
-        name: 'Surabaya (Gubeng) - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=SGU&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
-      },
-      {
-        name: 'Malang (Kota) - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=ML&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
-      },
-      {
-        name: 'Tegal - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=TG&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
-      },
-      {
-        name: 'Jember - Kediri',
-        link: 'http://www.tiket.com/kereta-api/cari?d=JR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
-      }
-    ];
-
-    var bus = [
-      {
-        name: 'P.O. Harapan Jaya',
-        link: 'http://www.poharapanjaya.com/bus-malam/'
-      }
-    ];
-
     var hotel = [
       {
         name: 'Grand Surya Hotel Kediri',
@@ -117,6 +83,60 @@ angular.module('lelyvitoApp')
       }
     ];
 
+    var train = [
+      {
+        name: 'Jakarta (Gambir) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=GMR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&do=Cari'
+      },
+      {
+        name: 'Jakarta (Pasar Senen) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=PSE&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Jakarta (Tanah Abang) – Kediri'
+      },
+      {
+        name: 'Bandung - Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=BD&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Bandung (Kiaracondong) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=KAC&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Tegal – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=TG&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Yogyakarta (Tugu) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=YK&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Semarang (Tawang) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=SMT&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Solo (Balapan) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=SLO&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Madiun – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=MN&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0'
+      },
+      {
+        name: 'Malang (Kota) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=ML&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Surabaya (Gubeng) – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=SGU&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      },
+      {
+        name: 'Jember – Kediri',
+        link: 'http://www.tiket.com/kereta-api/cari?d=JR&a=KD&date=2014-10-10&ret_date=&adult=1&child=0&infant=0&class=all&maxseats=1'
+      }
+    ];
+
     $scope.model = [
       {
         title: 'Plane',
@@ -128,15 +148,8 @@ angular.module('lelyvitoApp')
         content: train,
       },
       {
-        title: 'Bus',
-        content: bus
-      },
-      {
         title: 'Hotel',
         content: hotel
-      },
-      {
-        title: 'Google Maps'
       }
     ];
   });

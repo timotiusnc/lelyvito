@@ -1,17 +1,6 @@
 <div id="guestbook-container" class="screen-container">
   <div class="screen-header">
-    <h1>RSVP & Guestbook</h1>
-  </div>
-
-  <div class="row btn-toggle">
-    <div class="btn-group">
-      <label class="btn btn-primary" ng-class="{active: !isGreetings}" ng-click="isGreetings = false;">
-        RSVP
-      </label>
-      <label class="btn btn-primary" ng-class="{active: isGreetings}" ng-click="isGreetings = true;">
-        Guestbook
-      </label>
-    </div>
+    <h1>RSVP</h1>
   </div>
 
   <div class="row guestbook-loading" ng-show="isMsgLoading">
@@ -162,7 +151,7 @@
     </div>
 
     <div class="row actions">
-      <a class="btn btn-danger" ng-click="isGreetings = true;">Done RSVP ? Say your greetings here</a>
+      <a id="check-story-btn" ui-sref="about" class="btn btn-lg btn-danger">Check Out Our Story</a>
     </div>
   </div>
 </div>
