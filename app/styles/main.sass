@@ -17,6 +17,7 @@ $overlay-bg: rgba(255,255,255,0.8)
 @import "elmt/llv-fbcomment"
 @import "elmt/llv-timeline"
 @import "elmt/llv-theme-changer"
+@import "elmt/llv-path-menu"
 @import "nav"
 @import "header"
 @import "slide"
@@ -58,7 +59,6 @@ footer
   color: lighten($base-color, 30%)
   text-align: center
   font-size: emCalc(12px)
-  padding: 10px 0
   p
     margin-top: 8px
   .fb_iframe_widget, #twitter-widget-0
@@ -82,7 +82,7 @@ footer
 #main-ui-view
   .screen-container
     @extend .container
-    padding: 60px 30px 15px 30px
+    padding: 15px 30px 15px 30px
     .screen-header
       color: $base-color
       text-align: center
